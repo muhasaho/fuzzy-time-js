@@ -5,7 +5,7 @@
   "description": "convert accurate time to fuzzy time. eg. 10:13 => quarter past ten",
   "repository": {
     "type": "git",
-    "url": "git://github.com/muhasaho/fuzzyTimeJS.git"
+    "url": "git://github.com/muhasaho/fuzzy-time-js.git"
   },
   "keywords": [],
   "author": "Muhammed Saho",
