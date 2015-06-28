@@ -16,7 +16,7 @@ Using Bower:
 
     bower install fuzzyTimeJS
 
-Or grab the [source](https://github.com/muhasaho/fuzzy-time-js/dist/fuzzyTimeJS.js) ([minified](https://github.com/muhasaho/fuzzy-time-jsS/dist/fuzzyTimeJS.min.js)).
+Or grab the [source](https://github.com/muhasaho/fuzzy-time-js/blob/master/dist/fuzzyTimeJS.js) ([minified](https://github.com/muhasaho/fuzzy-time-js/blob/master/dist/fuzzyTimeJS.min.js)).
 
 ## Usage
 
