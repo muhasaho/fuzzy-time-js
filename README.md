@@ -1,6 +1,7 @@
 # fuzzyTimeJS
 
 WORK IN PROGRESS
+
 [![Build Status](https://travis-ci.org/muhasaho/fuzzy-time-js.svg)](https://travis-ci.org/muhasaho/fuzzy-time-js)
 
 convert accurate time to fuzzy time. eg. 10:13 => quarter past ten

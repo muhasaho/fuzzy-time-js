@@ -4,7 +4,7 @@ test("the base function exists", function() {
   ok(fuzzyTimeJS);
 });
 
-test("default arguments", function(assert){
+test("no arguments return \"twelve o'clock\"", function(assert){
   assert.equal(fuzzyTimeJS(), "twelve o'clock");
 });
 
