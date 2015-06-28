@@ -24,7 +24,7 @@ Or grab the [source](https://github.com/muhasaho/fuzzy-time-js/blob/master/dist/
 
 Basic usage is as follows:
 
-    fuzzyTimeJS();
+    fuzzyTimeJS.convert(0,0); //twelve o'clock
 
 For advanced usage, see the documentation.
 
