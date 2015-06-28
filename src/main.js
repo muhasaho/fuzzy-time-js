@@ -7,7 +7,7 @@ var fuzzyTimeJS = function(hour, minute) {
   hour = typeof hour !== 'undefined' ? hour : 0;
   minute = typeof minute !== 'undefined' ? minute : "0";
   
-  // Define hour maps
+  // Define hour map
   var hourMap = [
     "twelve",
     "one",
@@ -24,7 +24,14 @@ var fuzzyTimeJS = function(hour, minute) {
     "twelve"
   ];
   
-  // Define minute maps
+  // Define infix map
+  var infixMap = {
+    "to": " to ",
+    "past": " past ",
+    "nothing": " "
+  };
+  
+  // Define minute map
   var minuteMap = {
     "0": "o'clock",
     "5": "five",
@@ -33,7 +40,14 @@ var fuzzyTimeJS = function(hour, minute) {
     "20": "twenty",
     "30": "half"
   };
-  return hourMap[hour] + " " + minuteMap[minute];
+  
+  // Define postfix map
+  var postfixMap = {
+    "sharp": "o'clock",
+    "nothing": ""
+  };
+  
+  return hourMap[hour] + infixMap.nothing + minuteMap[minute] + postfixMap.nothing;
 };
 
 
