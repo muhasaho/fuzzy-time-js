@@ -1,0 +1,12 @@
+{
+  "name": "fuzzyTimeJS",
+  "version": "0.0.0",
+  "main": "dist/fuzzyTimeJS.min.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {}
+}
