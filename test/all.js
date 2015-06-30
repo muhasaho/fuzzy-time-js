@@ -1,6 +1,6 @@
 /// <reference path="lib/qunit.js" />
 
-test("the base object exists", function() {
+test("the base object exists", function(){
   ok(fuzzyTimeJS);
 });
 
@@ -8,7 +8,7 @@ test("no arguments return \"twelve o'clock\"", function(assert){
   assert.equal(fuzzyTimeJS.convert(), "twelve o'clock");
 });
 
-test("getMinuteWord", function(assert) {
+test("getMinuteWord", function(assert){
   assert.equal(fuzzyTimeJS.helpers.getMinuteWord(0), "o'clock");
   assert.equal(fuzzyTimeJS.helpers.getMinuteWord(3), "o'clock");
   assert.equal(fuzzyTimeJS.helpers.getMinuteWord(4), "five");
@@ -31,6 +31,35 @@ test("getMinuteWord", function(assert) {
   assert.equal(fuzzyTimeJS.helpers.getMinuteWord(56), "five");
   assert.equal(fuzzyTimeJS.helpers.getMinuteWord(57), "o'clock");
   assert.equal(fuzzyTimeJS.helpers.getMinuteWord(59), "o'clock");
+});
+
+test("getHourWord", function(assert){
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(0), "twelve");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(1), "one");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(2), "two");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(3), "three");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(4), "four");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(5), "five");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(6), "six");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(7), "seven");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(8), "eight");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(9), "nine");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(10), "ten");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(11), "eleven");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(12), "twelve");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(0, true), "one");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(1, true), "two");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(2, true), "three");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(3, true), "four");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(4, true), "five");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(5, true), "six");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(6, true), "seven");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(7, true), "eight");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(8, true), "nine");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(9, true), "ten");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(10, true), "eleven");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(11, true), "twelve");
+  assert.equal(fuzzyTimeJS.helpers.getHourWord(12, true), "one");
 });
 
 //test("twelve", window.fuzzyTimeJS());

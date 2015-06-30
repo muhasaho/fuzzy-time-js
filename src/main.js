@@ -33,8 +33,7 @@ var fuzzyTimeJS = {
       "eight",
       "nine",
       "ten",
-      "eleven",
-      "twelve"
+      "eleven"
     ],
     
     // Define postfix map
@@ -75,17 +74,30 @@ var fuzzyTimeJS = {
       else{
         return minuteMap["30"];
       }
+    },
+    
+    /**
+     * returns the hour word. retruns hour word + 1 if isTo is true
+     */
+    getHourWord: function(hour, isTo){
+      var hourMap = fuzzyTimeJS.vars.hourMap;
+      if(isTo){
+        return hourMap[(hour + 1) % 12];
+      }
+      else{
+        return hourMap[hour % 12];
+      }
     }
   },
     
-    convert: function(hour, minute){
-      // Set default parameters
-      hour = typeof hour !== 'undefined' ? hour : 0;
-      minute = typeof minute !== 'undefined' ? minute : "0";
-      
-      
-      return this.vars.hourMap[hour] + this.vars.infixMap.nothing + this.vars.minuteMap[minute] + this.vars.postfixMap.nothing;
-    }
+  convert: function(hour, minute){
+    // Set default parameters
+    hour = typeof hour !== 'undefined' ? hour : 0;
+    minute = typeof minute !== 'undefined' ? minute : "0";
+    
+    
+    return this.vars.hourMap[hour] + this.vars.infixMap.nothing + this.vars.minuteMap[minute] + this.vars.postfixMap.nothing;
+  }
 };
 
 // Version.
