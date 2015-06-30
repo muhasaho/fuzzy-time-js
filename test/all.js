@@ -62,4 +62,12 @@ test("getHourWord", function(assert){
   assert.equal(fuzzyTimeJS.helpers.getHourWord(12, true), "one");
 });
 
+test("convert", function (assert) {
+  assert.equal(fuzzyTimeJS.convert(0,0), "twelve o'clock");
+  assert.equal(fuzzyTimeJS.convert(0, 3), "twelve o'clock");
+  assert.equal(fuzzyTimeJS.convert(0, 4), "five past twelve");
+  assert.equal(fuzzyTimeJS.convert(0, 7), "five past twelve");
+  assert.equal(fuzzyTimeJS.convert(0, 8), "ten past twelve");
+})
+
 //test("twelve", window.fuzzyTimeJS());

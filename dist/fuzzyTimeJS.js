@@ -20,9 +20,9 @@ var fuzzyTimeJS = {
     
     // Define infix map
     infixMap : {
-      "to": " to ",
-      "past": " past ",
-      "nothing": " "
+      "to": "to",
+      "past": "past",
+      "nothing": ""
     },
     
     // Define hour map
@@ -94,14 +94,36 @@ var fuzzyTimeJS = {
       }
     }
   },
-    
+  
+  /**
+   * returns fuzzy time. If no args, returns "twelve o'clock"
+   */
   convert: function(hour, minute){
     // Set default parameters
     hour = typeof hour !== 'undefined' ? hour : 0;
-    minute = typeof minute !== 'undefined' ? minute : "0";
+    minute = typeof minute !== 'undefined' ? minute : 0;
+    var infix, postfix, minuteWord, hourWord;
     
+    minuteWord = fuzzyTimeJS.helpers.getMinuteWord(minute);
+    postfix = fuzzyTimeJS.vars.postfixMap.nothing;
     
-    return this.vars.hourMap[hour] + this.vars.infixMap.nothing + this.vars.minuteMap[minute] + this.vars.postfixMap.nothing;
+    // it's o'clock
+    if (minuteWord === fuzzyTimeJS.vars.minuteMap["0"]){
+      return fuzzyTimeJS.helpers.getHourWord(hour) + " " + minuteWord;
+    }
+    
+    // it is 'to'
+    if (minute > 33){
+      infix = fuzzyTimeJS.vars.infixMap.to;
+      hourWord = fuzzyTimeJS.helpers.getHourWord(hour, true);
+      return minuteWord + " " + infix + " " + hourWord;
+    }
+    // it is 'past'
+    else{
+      infix = fuzzyTimeJS.vars.infixMap.past;
+      hourWord = fuzzyTimeJS.helpers.getHourWord(hour);
+      return minuteWord + " " + infix + " " + hourWord;
+    }
   }
 };
 
