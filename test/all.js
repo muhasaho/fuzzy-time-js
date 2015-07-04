@@ -68,6 +68,23 @@ test("convert", function (assert) {
   assert.equal(fuzzyTimeJS.convert(0, 4), "five past twelve");
   assert.equal(fuzzyTimeJS.convert(0, 7), "five past twelve");
   assert.equal(fuzzyTimeJS.convert(0, 8), "ten past twelve");
-})
+  assert.equal(fuzzyTimeJS.convert(0, 12), "ten past twelve");
+  assert.equal(fuzzyTimeJS.convert(0, 13), "quarter past twelve");
+  assert.equal(fuzzyTimeJS.convert(0, 17), "quarter past twelve");
+  assert.equal(fuzzyTimeJS.convert(0, 18), "twenty past twelve");
+  assert.equal(fuzzyTimeJS.convert(0, 26), "twenty past twelve");
+  assert.equal(fuzzyTimeJS.convert(0, 27), "half past twelve");
+  assert.equal(fuzzyTimeJS.convert(0, 33), "half past twelve");
+  assert.equal(fuzzyTimeJS.convert(0, 34), "twenty to one");
+  assert.equal(fuzzyTimeJS.convert(0, 42), "twenty to one");
+  assert.equal(fuzzyTimeJS.convert(0, 43), "quarter to one");
+  assert.equal(fuzzyTimeJS.convert(0, 47), "quarter to one");
+  assert.equal(fuzzyTimeJS.convert(0, 48), "ten to one");
+  assert.equal(fuzzyTimeJS.convert(0, 52), "ten to one");
+  assert.equal(fuzzyTimeJS.convert(0, 53), "five to one");
+  assert.equal(fuzzyTimeJS.convert(0, 56), "five to one");
+  assert.equal(fuzzyTimeJS.convert(0, 57), "one o'clock");
+  assert.equal(fuzzyTimeJS.convert(0, 59), "one o'clock");
+});
 
 //test("twelve", window.fuzzyTimeJS());

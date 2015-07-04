@@ -109,7 +109,13 @@ var fuzzyTimeJS = {
     
     // it's o'clock
     if (minuteWord === fuzzyTimeJS.vars.minuteMap["0"]){
-      return fuzzyTimeJS.helpers.getHourWord(hour) + " " + minuteWord;
+      if (minute > 33){
+        return fuzzyTimeJS.helpers.getHourWord(hour, true) + " " + minuteWord;
+      }
+      else{
+        return fuzzyTimeJS.helpers.getHourWord(hour) + " " + minuteWord;
+      }
+
     }
     
     // it is 'to'
