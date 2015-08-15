@@ -20,11 +20,11 @@ Basic usage is as follows:
 
     fuzzyTimeJS.convert(0,0); //twelve o'clock
 
-For advanced usage, see the documentation.
+For advanced usage, see the [documentation](https://github.com/muhasaho/fuzzy-time-js/blob/master/docs/MAIN.md).
 
 ## Documentation
 
-Start with `docs/MAIN.md`.
+See [docs/MAIN.md](https://github.com/muhasaho/fuzzy-time-js/blob/master/docs/MAIN.md).
 
 ## Contributing
 
