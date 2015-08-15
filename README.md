@@ -4,12 +4,6 @@
 
 convert accurate time to fuzzy time. eg. 10:13 => quarter past ten
 
-## About
-
-A JavaScript library by Muhammed Saho.
-
-See the [project homepage](http://muhasaho.github.io/fuzzy-time-js).
-
 ## Installation
 
 Grab the [source](https://github.com/muhasaho/fuzzy-time-js/blob/master/dist/fuzzyTimeJS.js) ([minified](https://github.com/muhasaho/fuzzy-time-js/blob/master/dist/fuzzyTimeJS.min.js)).
